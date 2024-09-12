@@ -88,6 +88,8 @@ RUN \
     requests \
     requests_oauthlib \
     unidecode && \
+  pip install -U --no-cache-dir \
+    python3-discogs-client && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apk del --purge \
