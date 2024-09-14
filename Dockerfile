@@ -89,7 +89,10 @@ RUN \
     requests_oauthlib \
     unidecode && \
   pip install -U --no-cache-dir \
-    python3-discogs-client && \
+    python3-discogs-client \
+    beetstream && \
+  pip install -U --no-cache-dir \
+    git+https://github.com/MxMarx/beets-originquery && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apk del --purge \
