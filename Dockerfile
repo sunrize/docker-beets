@@ -93,6 +93,12 @@ RUN \
     beetstream && \
   pip install -U --no-cache-dir \
     git+https://github.com/MxMarx/beets-originquery && \
+  pip install -U --no-cache-dir \
+    beetcamp && \
+  pip install -U --no-cache-dir \
+    git+https://github.com/HOZHENWAI/Beets-Plugin_VGMdb.git && \
+  pip install -U --no-cache-dir \
+    beets-noimport && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
   apk del --purge \
