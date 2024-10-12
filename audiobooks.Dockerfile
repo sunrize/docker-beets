@@ -89,10 +89,20 @@ RUN \
     pylast \
     requests \
     requests_oauthlib \
-    unidecode && \
+    unidecode
+# RUN \
+#   mkdir -p \
+#     /tmp/beets-audible
+# ADD beets-audible /tmp/beets-audible/
+# RUN \
+#   pip install -U --no-cache-dir \
+#     /tmp/beets-audible/
+RUN \
+  pip install -U --no-cache-dir \
+    git+https://github.com/sunrize/beets-audible.git@regions
+RUN \
   pip install -U --no-cache-dir \
     beetstream \
-    beets-audible \
     beets-copyartifacts3 && \
   pip install -U --no-cache-dir \
     beets-noimport && \
