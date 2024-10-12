@@ -269,7 +269,8 @@ Below are the instructions for updating containers:
 
 ### Image Update Notifications - Diun (Docker Image Update Notifier)
 
-**tip**: We recommend [Diun](https://crazymax.dev/diun/) for update notifications. Other tools that automatically update containers unattended are not recommended or supported.
+>[!TIP]
+>We recommend [Diun](https://crazymax.dev/diun/) for update notifications. Other tools that automatically update containers unattended are not recommended or supported.
 
 ## Building locally
 
@@ -294,6 +295,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **01.10.24:** - Add packages required for Discogs plugin.
 * **28.08.24:** - Rebase to Alpine 3.20, switch from Pillow to Imagemagick.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **25.08.23:** - Rebase to Alpine 3.18, pin Pillow to 9.5.0.
