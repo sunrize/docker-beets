@@ -90,7 +90,6 @@ RUN \
     typing-extensions \
     unidecode && \
   pip install -U --no-cache-dir \
-    python3-discogs-client \
     beetstream && \
   pip install -U --no-cache-dir \
     git+https://github.com/MxMarx/beets-originquery && \

@@ -82,13 +82,14 @@ RUN \
     # beets==${BEETS_VERSION} \
     beets-extrafiles \
     beetcamp \
-    discogs-client \
+    python3-discogs-client \
     flask \
     PyGObject \
     pyacoustid \
     pylast \
     requests \
     requests_oauthlib \
+    typing-extensions \
     unidecode
 RUN \
   pip install -U --no-cache-dir \

@@ -82,21 +82,15 @@ RUN \
     # beets==${BEETS_VERSION} \
     beets-extrafiles \
     beetcamp \
-    discogs-client \
+    python3-discogs-client \
     flask \
     PyGObject \
     pyacoustid \
     pylast \
     requests \
     requests_oauthlib \
+    typing-extensions \
     unidecode
-# RUN \
-#   mkdir -p \
-#     /tmp/beets-audible
-# ADD beets-audible /tmp/beets-audible/
-# RUN \
-#   pip install -U --no-cache-dir \
-#     /tmp/beets-audible/
 RUN \
   pip install -U --no-cache-dir \
     git+https://github.com/sunrize/beets-audible.git@regions
