@@ -24,7 +24,8 @@ RUN \
     libpng-dev \
     mpg123-dev \
     openjpeg-dev \
-    python3-dev && \
+    python3-dev \
+    openssh && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     chromaprint \
