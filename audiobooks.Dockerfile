@@ -68,18 +68,18 @@ RUN \
   make -f Makefile.linux && \
   cp -p mp3val /usr/bin && \
   echo "**** install pip packages ****" && \
-  # if [ -z ${BEETS_VERSION+x} ]; then \
-  #   BEETS_VERSION=$(curl -sL  https://pypi.python.org/pypi/beets/json |jq -r '. | .info.version'); \
-  # fi && \
+  if [ -z ${BEETS_VERSION+x} ]; then \
+    BEETS_VERSION=$(curl -sL  https://pypi.python.org/pypi/beets/json |jq -r '. | .info.version'); \
+  fi && \
   python3 -m venv /lsiopy && \
   pip install -U --no-cache-dir \
     pip \
     wheel && \
-  pip install -U --no-cache-dir \
-    git+https://github.com/beetbox/beets && \
+  # pip install -U --no-cache-dir \
+  #   git+https://github.com/beetbox/beets && \
   pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.20/ \
     beautifulsoup4 \
-    # beets==${BEETS_VERSION} \
+    beets==${BEETS_VERSION} \
     beets-extrafiles \
     beetcamp \
     python3-discogs-client \
