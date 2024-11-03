@@ -93,7 +93,8 @@ RUN \
     unidecode
 RUN \
   pip install -U --no-cache-dir \
-    git+https://github.com/sunrize/beets-audible.git@regions
+    git+https://github.com/sunrize/beets-audible.git@main \
+    tldextract
 RUN \
   pip install -U --no-cache-dir \
     beetstream \
